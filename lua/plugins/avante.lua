@@ -7,11 +7,6 @@ vim.g.avante_current_model = "gpt-4o"
 
 -- Helper to switch models + token limits
 local function set_avante_model(model)
-  local max_tokens = 1000
-
-  if model == "claude-sonnet-4.6" then
-    max_tokens = 1800
-  end
 
   require("avante").setup({
     provider = "copilot",
@@ -24,9 +19,6 @@ local function set_avante_model(model)
         proxy = nil,
         timeout = 30000,
         temperature = 0,
-        extra_request_body = {
-          max_tokens = max_tokens,
-        },
       },
     },
 
@@ -55,7 +47,7 @@ local function set_avante_model(model)
   })
 
   vim.g.avante_current_model = model
-  print("Avante → " .. model .. " | tokens: " .. max_tokens)
+  print("Avante → " .. model)
 end
 
 -- Initial setup
@@ -70,9 +62,6 @@ avante.setup({
       proxy = nil,
       timeout = 30000,
       temperature = 0,
-      extra_request_body = {
-        max_tokens = 1000,
-      },
     },
   },
 
@@ -107,3 +96,4 @@ vim.keymap.set("n", "<leader>am", function()
     set_avante_model("gpt-4o")
   end
 end, { desc = "Toggle Avante model (4o ↔ Sonnet 4.6)" })
+

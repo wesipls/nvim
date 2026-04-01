@@ -1,7 +1,7 @@
 -- TABS
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4   
-vim.opt.tabstop = 4     
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 
@@ -25,6 +25,7 @@ vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.switchbuf = "useopen,usetab,newtab"
 
 -- QUALITY OF LIFE
 vim.opt.wrap = false
@@ -36,3 +37,4 @@ vim.opt.signcolumn = "yes"
 vim.opt.cmdheight = 1
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.timeoutlen = 300
+

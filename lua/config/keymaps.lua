@@ -19,3 +19,8 @@ vim.keymap.set("v", "p", '"_dP', { desc = "Paste without overwriting register" }
 
 -- OIL
 vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Oil file manager" })
+
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New tab" })
+
+vim.keymap.set("n", "<leader><Right>", "gt", { desc = "Next tab" })
+vim.keymap.set("n", "<leader><Left>", "gT", { desc = "Previous tab" })

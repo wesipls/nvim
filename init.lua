@@ -6,7 +6,6 @@ vim.g.mapleader = " "
 -- CORE REQUIRES
 require("config.options")
 require("config.keymaps")
-
 -- PLUGINS
 require("plugins.theme")
 require("plugins.statusline")
